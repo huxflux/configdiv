@@ -1,2 +1,8 @@
 /* map escape to capslock */
 setxkbmap -option caps:swapescape
+
+/* turn off mousecursor in terminal xfce when typing */
+in terminalrc (~/.config/xfce/terminal/terminalrc)
+MiscMouseAutohide=TRUE
+
+/* next shitter */
