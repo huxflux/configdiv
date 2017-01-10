@@ -5,4 +5,10 @@ setxkbmap -option caps:swapescape
 in terminalrc (~/.config/xfce/terminal/terminalrc)
 MiscMouseAutohide=TRUE
 
+/* vi-mode in bash */
+/etc/inputrc
+
+set editing-mode vi
+set keymap vi-command
+
 /* next shitter */
