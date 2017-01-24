@@ -11,4 +11,7 @@ MiscMouseAutohide=TRUE
 set editing-mode vi
 set keymap vi-command
 
+/* print internet IP address */
+curl ifconfig.me
+
 /* next shitter */
