@@ -11,12 +11,11 @@ MiscMouseAutohide=TRUE
 set editing-mode vi
 set keymap vi-command
 
-<<<<<<< HEAD
 /* print internet IP address */
 curl ifconfig.me
 
 /* next shitter */
-=======
+
 export PATH=$PATH/bla/bla
 
 dpkg -L <packetname>
@@ -44,4 +43,3 @@ strace -p <pid>
 lsof -p <pid>
 
 du -h <dir> | grep '[0-9\.]\+G'
->>>>>>> 5bb0c59e432360b36011b5b8292adcc0acabb5d1
