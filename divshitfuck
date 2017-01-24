@@ -11,4 +11,30 @@ MiscMouseAutohide=TRUE
 set editing-mode vi
 set keymap vi-command
 
-/* next shitter */
+export PATH=$PATH/bla/bla
+
+dpkg -L <packetname>
+
+ln -s <existing file> <softlink filename>
+
+bash exec -l
+
+tar -zcvf filename.tar.gz <directory to compress>
+
+tar -xzvf filename.tar.gz
+
+apt-cache search linux-headers-$(uname -r)
+
+dpkg-query -Wf '${Installed-Size}\t${Package}\n'
+
+sort -n
+
+make > my.log 2>&1
+
+ldconfig -v
+
+strace -p <pid>
+
+lsof -p <pid>
+
+du -h <dir> | grep '[0-9\.]\+G'
