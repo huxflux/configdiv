@@ -1,0 +1,7 @@
+# flottings default config!
+iptables -N xxx # create a new chain
+iptables -A xxx --src 1.2.3.4 -j ACCEPT  # allow 1.2.3.4
+iptables -A xxx --src 1.2.3.5 -j ACCEPT  # allow 1.2.3.5
+iptables -A xxx --src 1.2.3.6 -j ACCEPT  # allow 1.2.3.6
+iptables -A xxx -j DROP  # drop everyone else
+iptables -I INPUT -m tcp -p tcp --dport 777 -j xxx  # use chain xxx for packets coming to TCP port 777
