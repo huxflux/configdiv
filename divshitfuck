@@ -43,3 +43,8 @@ strace -p <pid>
 lsof -p <pid>
 
 du -h <dir> | grep '[0-9\.]\+G'
+
+/* mounting cloned file from dd */
+fdisk -l clonedfile.img
+fjott = start * 512
+mount -o ro,loop,offset=fjott clonedfile.img /mnt/somewhere
