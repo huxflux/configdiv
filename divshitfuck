@@ -55,3 +55,6 @@ mysqladmin -uadmin -p variables | grep 'max.*connectnios'
 
 /* nmap stuff */
 nmap -p<port> 192.168.1.0/24 -oG - | grep <port>/open
+
+/* network paradise */
+lsof -Pnl +M -i4
