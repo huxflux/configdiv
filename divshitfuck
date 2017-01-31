@@ -52,3 +52,6 @@ mount -o ro,loop,offset=fjott clonedfile.img /mnt/somewhere
 /* mysql stuff */
 mysqladmin -uadmin -p extended-status | grep -i max_used_connections
 mysqladmin -uadmin -p variables | grep 'max.*connectnios'
+
+/* nmap stuff */
+nmap -p<port> 192.168.1.0/24 -oG - | grep <port>/open
