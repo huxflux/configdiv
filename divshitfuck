@@ -58,3 +58,19 @@ nmap -p<port> 192.168.1.0/24 -oG - | grep <port>/open
 
 /* network paradise */
 lsof -Pnl +M -i4
+
+/* shrinking image */
+sudo modprobe loop
+sudo losetup -f
+sudo losetup /dev/loop0 myimage.img
+sudo partprobe /dev/loop0
+
+sudo gparted /dev/loop0
+"cut space from last partition"
+
+sudo losetup -d /dev/loop0
+
+fdisk -l myimage.img
+
+"use value of END of last partition"
+sudo truncate --size=$[(<END> + 1)*512] myimage.img
