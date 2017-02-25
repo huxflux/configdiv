@@ -74,3 +74,6 @@ fdisk -l myimage.img
 
 "use value of END of last partition"
 sudo truncate --size=$[(<END> + 1)*512] myimage.img
+
+/* free cached memory */
+sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches'
