@@ -1,0 +1,102 @@
+/* map escape to capslock */
+setxkbmap -option caps:swapescape
+
+/* turn off mousecursor in terminal xfce when typing */
+in terminalrc (~/.config/xfce/terminal/terminalrc)
+MiscMouseAutohide=TRUE
+
+/* vi-mode in bash */
+/etc/inputrc
+
+set editing-mode vi
+set keymap vi-command
+
+/* print internet IP address */
+curl ifconfig.me
+
+/* next shitter */
+
+export PATH=$PATH/bla/bla
+
+dpkg -L <packetname>
+
+ln -s <existing file> <softlink filename>
+
+bash exec -l
+
+tar -zcvf filename.tar.gz <directory to compress>
+
+tar -xzvf filename.tar.gz
+
+apt-cache search linux-headers-$(uname -r)
+
+dpkg-query -Wf '${Installed-Size}\t${Package}\n'
+
+sort -n
+
+make > my.log 2>&1
+
+ldconfig -v
+
+strace -p <pid>
+
+lsof -p <pid>
+
+du -h <dir> | grep '[0-9\.]\+G'
+
+/* mounting cloned file from dd */
+fdisk -l clonedfile.img
+fjott = start * 512
+mount -o ro,loop,offset=fjott clonedfile.img /mnt/somewhere
+
+/* mysql stuff */
+mysqladmin -uadmin -p extended-status | grep -i max_used_connections
+mysqladmin -uadmin -p variables | grep 'max.*connectnios'
+
+/* nmap stuff */
+nmap -p<port> 192.168.1.0/24 -oG - | grep <port>/open
+
+/* network paradise */
+lsof -Pnl +M -i4
+
+/* shrinking image */
+sudo modprobe loop
+sudo losetup -f
+sudo losetup /dev/loop0 myimage.img
+sudo partprobe /dev/loop0
+
+sudo gparted /dev/loop0
+"cut space from last partition"
+
+sudo losetup -d /dev/loop0
+
+fdisk -l myimage.img
+
+"use value of END of last partition"
+sudo truncate --size=$[(<END> + 1)*512] myimage.img
+
+/* free cached memory */
+sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches'
+
+/* C# .net wrapper */
+New project, Class Library. Set ComVisible(true) in Project-settings->Assembly.
+1. You need to have ctor without any params.
+"
+[Guid("<PUT-GUID-HERE-1")]
+[ComVisible(true)]
+interface IFoo
+{
+	void doFoo();
+}
+
+[Guid("<PUT-GUID-HERE-2>")]
+class Foo : IFoo
+{
+	public void doFoo();
+	{
+	}
+}
+"
+
+Register the .dll using regasm. Use the Guid from the "class Foo : IFoo" when wrapping from Qt.
+
