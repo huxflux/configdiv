@@ -77,3 +77,26 @@ sudo truncate --size=$[(<END> + 1)*512] myimage.img
 
 /* free cached memory */
 sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches'
+
+/* C# .net wrapper */
+New project, Class Library. Set ComVisible(true) in Project-settings->Assembly.
+1. You need to have ctor without any params.
+"
+[Guid("<PUT-GUID-HERE-1")]
+[ComVisible(true)]
+interface IFoo
+{
+	void doFoo();
+}
+
+[Guid("<PUT-GUID-HERE-2>")]
+class Foo : IFoo
+{
+	public void doFoo();
+	{
+	}
+}
+"
+
+Register the .dll using regasm. Use the Guid from the "class Foo : IFoo" when wrapping from Qt.
+
