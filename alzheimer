@@ -100,3 +100,6 @@ class Foo : IFoo
 
 Register the .dll using regasm. Use the Guid from the "class Foo : IFoo" when wrapping from Qt.
 
+/* Starting Qt-apps in windowed mode */
+./program -platform xcb
+
