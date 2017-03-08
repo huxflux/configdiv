@@ -53,8 +53,6 @@ mount -o ro,loop,offset=fjott clonedfile.img /mnt/somewhere
 mysqladmin -uadmin -p extended-status | grep -i max_used_connections
 mysqladmin -uadmin -p variables | grep 'max.*connectnios'
 
-mysqladmin flush-hosts -u root -p
-
 /* nmap stuff */
 nmap -p<port> 192.168.1.0/24 -oG - | grep <port>/open
 
@@ -76,13 +74,6 @@ fdisk -l myimage.img
 
 "use value of END of last partition"
 sudo truncate --size=$[(<END> + 1)*512] myimage.img
-<<<<<<< HEAD
-/* BLA BLA BLA */
-
-/* MAKING DEB PACKAGE */
-
-objdump -p | grep NEEDED
-=======
 
 /* free cached memory */
 sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches'
@@ -108,5 +99,7 @@ class Foo : IFoo
 "
 
 Register the .dll using regasm. Use the Guid from the "class Foo : IFoo" when wrapping from Qt.
->>>>>>> 8735173106ba214884a2256889ccd2051ec8fd3c
+
+/* Starting Qt-apps in windowed mode */
+./program -platform xcb
 
