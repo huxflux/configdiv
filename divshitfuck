@@ -53,6 +53,8 @@ mount -o ro,loop,offset=fjott clonedfile.img /mnt/somewhere
 mysqladmin -uadmin -p extended-status | grep -i max_used_connections
 mysqladmin -uadmin -p variables | grep 'max.*connectnios'
 
+mysqladmin flush-hosts -u root -p
+
 /* nmap stuff */
 nmap -p<port> 192.168.1.0/24 -oG - | grep <port>/open
 
@@ -74,3 +76,9 @@ fdisk -l myimage.img
 
 "use value of END of last partition"
 sudo truncate --size=$[(<END> + 1)*512] myimage.img
+/* BLA BLA BLA */
+
+/* MAKING DEB PACKAGE */
+
+objdump -p | grep NEEDED
+
