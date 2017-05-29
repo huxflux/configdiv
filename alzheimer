@@ -103,3 +103,8 @@ Register the .dll using regasm. Use the Guid from the "class Foo : IFoo" when wr
 /* Starting Qt-apps in windowed mode */
 ./program -platform xcb
 
+------ TEAMVIEWER RESET -------
+sudo teamviewer --daemon stop
+sudo rm -f /opt/teamviewer9/config/global.conf
+sudo teamviewer --daemon start
+
